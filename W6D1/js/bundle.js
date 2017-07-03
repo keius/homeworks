@@ -150,6 +150,10 @@ View.prototype.exercise5 = function () {
   //  'data-pos' of every square
 
   //your code here!
+  $('.square').on("click", e => {
+    const $sq = $(e.currentTarget);
+    alert($sq.attr("data-pos"));
+  });
 };
 
 View.prototype.exercise6 = function () {
@@ -160,6 +164,10 @@ View.prototype.exercise6 = function () {
   //hint: use window._randomColorString() (defined at top) to get a random color!
 
   //your code here!
+  $('.square').each ( (idx , el) => {
+    var $sq = $(el);
+    $sq.css("background-color", window._randomColorString());
+  });
 };
 
 View.prototype.exercise7 = function(){
@@ -170,6 +178,10 @@ View.prototype.exercise7 = function(){
   //rainbow.
 
   //your code here!
+  $('#easel').on("mouseenter", ".square", e => {
+    const $sq = $(e.currentTarget);
+    console.log($sq.css("background-color"));
+  });
 };
 
 
